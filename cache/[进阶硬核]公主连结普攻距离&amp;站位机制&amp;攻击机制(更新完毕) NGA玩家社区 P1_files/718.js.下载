@@ -1,0 +1,26 @@
+(function () {
+  var bg_data = [{"pid":"718","hiturl":"https://g1.tagtic.cn/don/cl?encode_nyg=cmVxaWQ9dXVtLTN3Rk5Pcm1wbHk0WGM3emJSJmNvbz02NmNiNGY3MjJiNjA5N2ViMmRhYWM3M2I4MTdmMTVmOWU1NmEzNmZjN2UzYTYyZmU4ZTVmM2MxNTJiNDZkMzNlJm9zPTMmcmVmPWh0dHBzJTNBJTJGJTJGYmJzLm5nYS5jbiUyRnJlYWQucGhwJTNGdGlkJTNEMjEzNTE1MTgmYWR2ZXJ1c2VyaWQ9NjM0Jm9yZGVyaWQ9NTgzNiZhaWQ9NzI2MSZwcm92aW5jZUlkPTE3JnBheW1lbnQ9Y3B0JmFkX2Zyb209MCZtaWQ9NzI2MTEmZ3JvdXBfaWQ9NzI2MTEmcG9zaXRpb249NjY1Jnc9MTIwJmg9MjQwJmNvc3Q9MTAwJmNvZWZmaWNpZW50PTEmc2xvdEJpbmRpbmc9c2luZ2xlJmlzVW5pb249MSZuZXh0dXJsPWh0dHBzJTNBJTJGJTJGZ2FtZS5zdGFyZ2FtZS5jb20lMkZwbGF5JTJGc3RhcnRnYW1lJTNGaWQlM0Q3MDg&v_y=778cae0b7bf35e8cda57864657a79ca66f926e1235608ba10134938471f3354d","wnUrl":"https://g1.tagtic.cn/don/wn?encode_nyg=cmVxaWQ9dXVtLTN3Rk5Pcm1wbHk0WGM3emJSJmNvbz02NmNiNGY3MjJiNjA5N2ViMmRhYWM3M2I4MTdmMTVmOWU1NmEzNmZjN2UzYTYyZmU4ZTVmM2MxNTJiNDZkMzNlJm9zPTMmcmVmPWh0dHBzJTNBJTJGJTJGYmJzLm5nYS5jbiUyRnJlYWQucGhwJTNGdGlkJTNEMjEzNTE1MTgmYWR2ZXJ1c2VyaWQ9NjM0Jm9yZGVyaWQ9NTgzNiZhaWQ9NzI2MSZwcm92aW5jZUlkPTE3JnBheW1lbnQ9Y3B0JmFkX2Zyb209MCZtaWQ9NzI2MTEmZ3JvdXBfaWQ9NzI2MTEmcG9zaXRpb249NjY1Jnc9MTIwJmg9MjQwJmNvc3Q9MTAwJmNvZWZmaWNpZW50PTEmc2xvdEJpbmRpbmc9c2luZ2xlJmlzVW5pb249MQ&v_y=3e9676bbeae5a60cfc2815fb57a0667a1fa9cb0a5b36813c51fdaecfa4b5cadf&","box":"https://ad-static-xg.tagtic.cn/ad-material/images/Gc2gwYnQ3yzG6PbcFMf15kgkql94NjsvKqcU3Gpz.gif","txt":"","tid":1,"width":120,"height":240,"weight":100047.2578125,"time":10,"IsUnion":1,"type":0}];
+  if (bg_data.length > 0) {
+    var ref = bg_data[0].box.substring(bg_data[0].box.lastIndexOf('/'), bg_data[0].box.lastIndexOf('.'));
+    ngaAds.push({
+      "id": "bbs_ads22",
+      "isUnion": "" + bg_data[0].IsUnion + "",
+      "file": "" + bg_data[0].box + "",
+      "url": "" + bg_data[0].hiturl + "",
+      "title": "",
+      "width": "" + bg_data[0].width + "",
+      "height": "" + bg_data[0].height + "",
+      "date": "all",
+      "rate": "100",
+      "nolog": "1",
+      "type": "" + bg_data[0].type + "",
+      "sgid": bg_data[0].pid,
+      "refreshid": "" + ref + "",
+      "onload": function () {
+        var x = document.createElement("script");
+        x.src = bg_data[0].wnUrl;
+        document.getElementsByTagName("head")[0].appendChild(x);
+      }
+    });
+  }
+})();
