@@ -1,0 +1,26 @@
+(function () {
+  var bg_data = [{"pid":"714","hiturl":"https://g1.tagtic.cn/don/cl?encode_nyg=cmVxaWQ9Q3dHbWYwT0syc21IUXl2WTVTWVhrJmNvbz0xY2MzMTBhYzhhNTQ1YWY2MWM3ODBhN2ZlZjY5MzY0ZGYxYzA3MjAzNGY3Y2JlZGNlYzZkMDZhYzQ4Zjc4OTMzJm9zPTMmcmVmPWh0dHBzJTNBJTJGJTJGYmJzLm5nYS5jbiUyRnJlYWQucGhwJTNGdGlkJTNEMjE2MTE1ODcmYWR2ZXJ1c2VyaWQ9NjM0Jm9yZGVyaWQ9NTgzNSZhaWQ9NzI1OSZwcm92aW5jZUlkPTE3JnBheW1lbnQ9Y3B0JmFkX2Zyb209MCZtaWQ9NzI1OTEmZ3JvdXBfaWQ9NzI1OTEmcG9zaXRpb249NjYzJnc9OTcwJmg9OTAmY29zdD0xMDAmY29lZmZpY2llbnQ9MSZzbG90QmluZGluZz1zaW5nbGUmaXNVbmlvbj0xJm5leHR1cmw9aHR0cHMlM0ElMkYlMkZnYW1lLnN0YXJnYW1lLmNvbSUyRnBsYXklMkZzdGFydGdhbWUlM0ZpZCUzRDYzNA&v_y=7a9ac8d8888fd4e4644dcb4c8be1b4b4e4fc2870053f851abf4f2eb92ed2bd2f","wnUrl":"https://g1.tagtic.cn/don/wn?encode_nyg=cmVxaWQ9Q3dHbWYwT0syc21IUXl2WTVTWVhrJmNvbz0xY2MzMTBhYzhhNTQ1YWY2MWM3ODBhN2ZlZjY5MzY0ZGYxYzA3MjAzNGY3Y2JlZGNlYzZkMDZhYzQ4Zjc4OTMzJm9zPTMmcmVmPWh0dHBzJTNBJTJGJTJGYmJzLm5nYS5jbiUyRnJlYWQucGhwJTNGdGlkJTNEMjE2MTE1ODcmYWR2ZXJ1c2VyaWQ9NjM0Jm9yZGVyaWQ9NTgzNSZhaWQ9NzI1OSZwcm92aW5jZUlkPTE3JnBheW1lbnQ9Y3B0JmFkX2Zyb209MCZtaWQ9NzI1OTEmZ3JvdXBfaWQ9NzI1OTEmcG9zaXRpb249NjYzJnc9OTcwJmg9OTAmY29zdD0xMDAmY29lZmZpY2llbnQ9MSZzbG90QmluZGluZz1zaW5nbGUmaXNVbmlvbj0x&v_y=36e427805dae9df24a5c0f60504c1a91fa12ad0717a0fd0057118a65dd54846c&","box":"https://ad-static-xg.tagtic.cn/ad-material/images/hhWVbO0ypGJKzuJEvVzuzcoFB9tqm63syuUgqDi5.gif","txt":"","tid":1,"width":970,"height":90,"weight":50747.91796875,"time":10,"IsUnion":1,"type":0}];
+  if (bg_data.length > 0) {
+    var ref = bg_data[0].box.substring(bg_data[0].box.lastIndexOf('/'), bg_data[0].box.lastIndexOf('.'));
+    ngaAds.push({
+      "id": "bbs_ads1",
+      "isUnion": "" + bg_data[0].IsUnion + "",
+      "file": "" + bg_data[0].box + "",
+      "url": "" + bg_data[0].hiturl + "",
+      "title": "",
+      "width": "" + bg_data[0].width + "",
+      "height": "" + bg_data[0].height + "",
+      "date": "all",
+      "rate": "100",
+      "nolog": "1",
+      "type": "" + bg_data[0].type + "",
+      "sgid": bg_data[0].pid,
+      "refreshid": "" + ref + "",
+      "onload": function () {
+        var x = document.createElement("script");
+        x.src = bg_data[0].wnUrl;
+        document.getElementsByTagName("head")[0].appendChild(x);
+      }
+    });
+  }
+})();
